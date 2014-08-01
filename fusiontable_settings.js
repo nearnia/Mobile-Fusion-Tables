@@ -30,7 +30,7 @@ var MapsLib = MapsLib || {}; MapsLib.schemaVersion = 2;
     // See https://developers.google.com/fusiontables/docs/v1/migration_guide for more info
 
     // The encrypted Table ID of your Fusion Table (found under File => About)
-    MapsLib.fusionTableId = "1fw-68t40ggCsbURG33BpieDdzzWHS8XniQaKKuMk";
+    MapsLib.fusionTableId = "1c5uoNh_kc5zHa2IX9UmVKIqZzxrWeVN-glk5weox";
 
     // *New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
     // *Important* this key is for demonstration purposes. please register your own.
@@ -161,15 +161,12 @@ $.extend(MapsLib, {
                 ] },
             { label: "Cost Range", type: "dropdown", 
                 entries: [
-                ["Any Cost", "", true],
-                ["At least $1M", "'Total Project Cost Estimate' LIKE '$%_,___,___'"],
-                ["At least $10M", "'Total Project Cost Estimate' LIKE '$%__,___,___'"],
-                ["At least $100M", "'Total Project Cost Estimate' LIKE '$%___,___,___'"]
+                ["$", "", true],
+                "$$",
+                "$$$",
+                "$$$$",
             ] },
-            { label: "Show Current Projects Only", type: "checkbox", 
-                is_checked: true,
-                checked_query: "'Percent Complete' NOT EQUAL TO '0%' AND 'Percent Complete' NOT EQUAL TO '100%'" },
-        ]
+                ]
     },
 
 
@@ -178,12 +175,12 @@ $.extend(MapsLib, {
     ///////////////////////
 
     // Title bar (including title of website)
-    title: "U.S. Health Centers",
+    title: "Nearnia",
 
     // Contents of the About Page.  You can use "{title}" to insert your title.
     aboutPage: " \
         <h3>About {title}</h3> \
-        <p>This is a demonstration of a Mobile Template using Fusion Tables.    Developed by SF Brigade for Code For America, it's an adaptation of Derek Eder's searchable Fusion Table template, licensed under the <a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/License' target='_blank'>MIT License</a>.    This particular application uses data from the <a href='http://datawarehouse.hrsa.gov/Download_HCC_LookALikes.aspx' target='_blank'>HRSA</a>.</p> \
+        <p>Nearnia is an app to help you find the perfect deal in real-time. Enjoy.</p> \
         <p>To use this template for your own Fusion Table data, <a href='https://github.com/sfbrigade/Mobile-Fusion-Tables' target='_blank'>clone this repository</a> and replace the fields inside fusiontable_settings.js to match your content.</p> \
         ",
 
@@ -293,7 +290,7 @@ $.extend(MapsLib, {
         boundsExceededMessage:      "You're currently outside the continental United States.    Defaulting to geographical center.",
 
         // use this zoom radius if starting at nearby location
-        nearbyZoomRadius:           "32 miles",
+        nearbyZoomRadius:           "320 miles",
 
         // Snap to nearby zoom radius when user hits "Nearby"?    Options are:
         // true              = always snap to zoom level
