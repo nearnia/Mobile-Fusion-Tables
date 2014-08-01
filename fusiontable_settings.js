@@ -117,7 +117,7 @@ $.extend(MapsLib, {
             entries: [ ["Anywhere", "0", true], ["2 miles"], ["8 miles"], ["100 miles"], ["500 miles"] ]
         },
         columns: [
-            { label: "Cuisine", type: "dropdown", foreach: "Cuisine",
+            { label: "Cuisine", type: "dropdown", foreach: "Type of Cuisine",
                 entries: [
                     ["Any", "", true],
                 ],
