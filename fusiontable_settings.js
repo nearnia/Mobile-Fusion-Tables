@@ -159,7 +159,7 @@ $.extend(MapsLib, {
                 "Vietnamese",
                 "Wild Game",
                 ] },
-            { label: "Cost Range", type: "dropdown", 
+            { label: "Cost Range", type: "dropdown", template: "Cost", 
                 entries: [
                 ["$", "", true],
                 "$$",
