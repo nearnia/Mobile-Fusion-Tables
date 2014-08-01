@@ -161,10 +161,10 @@ $.extend(MapsLib, {
                 ] },
             { label: "Cost Range", type: "dropdown", 
                 entries: [
-                ["Any Cost", "", true],
-                ["At least $1M", "'Total Project Cost Estimate' LIKE '$%_,___,___'"],
-                ["At least $10M", "'Total Project Cost Estimate' LIKE '$%__,___,___'"],
-                ["At least $100M", "'Total Project Cost Estimate' LIKE '$%___,___,___'"]
+                ["$", "", true],
+                ["$$"],
+                ["$$$],
+                ["$$$$"]
             ] },
             { label: "Show Current Projects Only", type: "checkbox", 
                 is_checked: true,
