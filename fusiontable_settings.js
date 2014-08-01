@@ -114,7 +114,7 @@ $.extend(MapsLib, {
     searchPage: { 
         allColumns: false,
         columns: [
-            { label: "Project Type", type: "dropdown", template: "'Project Type' CONTAINS '{text}'",
+            { label: "Cuisine", type: "dropdown", template: "'Cuisine'",
                 entries: [
                 ["All Projects", "", true],
                 "Bicycle",
