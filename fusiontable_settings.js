@@ -161,7 +161,8 @@ $.extend(MapsLib, {
                 ] },
             { label: "Cost Range", type: "dropdown", template: "Cost", 
                 entries: [
-                ["$", "", true],
+                ["Choose your price range", "", true],
+                "$"
                 "$$",
                 "$$$",
                 "$$$$",
@@ -290,7 +291,7 @@ $.extend(MapsLib, {
         boundsExceededMessage:      "You're currently outside the continental United States.    Defaulting to geographical center.",
 
         // use this zoom radius if starting at nearby location
-        nearbyZoomRadius:           "320 miles",
+        nearbyZoomRadius:           "50 miles",
 
         // Snap to nearby zoom radius when user hits "Nearby"?    Options are:
         // true              = always snap to zoom level
