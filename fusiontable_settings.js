@@ -30,7 +30,7 @@ var MapsLib = MapsLib || {}; MapsLib.schemaVersion = 2;
     // See https://developers.google.com/fusiontables/docs/v1/migration_guide for more info
 
     // The encrypted Table ID of your Fusion Table (found under File => About)
-    MapsLib.fusionTableId = "1GBiESlYt_Lc9O5PLuLaii1L74HeY7G4O1fMh9OE";
+    MapsLib.fusionTableId = "1c5uoNh_kc5zHa2IX9UmVKIqZzxrWeVN-glk5weox";
 
     // *New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
     // *Important* this key is for demonstration purposes. please register your own.
@@ -117,7 +117,7 @@ $.extend(MapsLib, {
             entries: [ ["Anywhere", "0", true], ["2 miles"], ["8 miles"], ["100 miles"], ["500 miles"] ]
         },
         columns: [
-            { label: "Organization Type", type: "dropdown", foreach: "Grantee Organization Type Description",
+            { label: "Cuisine", type: "dropdown", foreach: "Cuisine",
                 entries: [
                     ["Any", "", true],
                 ],
