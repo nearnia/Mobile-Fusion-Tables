@@ -226,24 +226,22 @@ $.extend(MapsLib, {
         {{else}} \
             <div class="infobox-map"> \
         {{/if}} \
-        <div class="entity blue_box {{row.Grantee_Organization_Type_Description}}"><span id="entity-text">.gov</span></div> \
-        <div class="entity red_box {{row.Grantee_Organization_Type_Description}}"><span id="entity-text">.com</span></div> \
-        <div class="entity orange_box {{row.Grantee_Organization_Type_Description}}"><span id="entity-text">.org</span></div> \
-        <h4 class="infobox-header">{{row.Name}}</h4> \
+        <h4 class="infobox-header">{{row.Business_Name}}</h4> \
+        <br>Full Address: {{row.FullAddress}} \
+        <p class="ui-li-desc infobox-subheader"><br> \
+        <strong>{{row.Cuisine }}</strong></p> \
+        <p class="ui-li-desc">Deal: {{row.Deal}} \
+        <br>Cost: {{row.Cost}} \
+        <br>Deal: {{row.Deal}} \
+        <br>On my way: {{row.OnMyWay}} \
         {{#if isListView}} \
-            <p class="ui-li-desc infobox-subheader"> \
-            {{row.Grantee_Organization_Type_Description}}<br> \
-            {{row.Address}}</p> \
         {{else}} \
-            <p></p><p class="ui-li-desc"> \
-            {{row.Grantee_Organization_Type_Description}}<br> \
-            {{row.Address}}<br> \
-            {{#if row.URL}} \
-                <a href="{{row.URL}}" target="_blank">{{row.URL}}</a><br> \
+            {{#if row.Deal}} \
+                <br><a href="{{row.Deal}}" target="_blank">{{row.Deal}}</a> \
             {{/if}} \
-            <a href="tel:1{{row.Telephone_Number}}">{{row.Telephone_Number}}</a></p> \
         {{/if}} \
         </p></div>',
+
                     
     // Infoboxes will also appear (unless blank) on your nearby or search address pins.
     // HTML is OK.  Use "{address}" to denote the entered address for addressPinInfobox.
@@ -264,10 +262,10 @@ $.extend(MapsLib, {
     defaultMapBounds: {
 
         // Use [latitude, longitude] or address
-        center: "United States",
+        center: "Manhattan Beach, CA",
 
         // "X miles" or "X meters"
-        radius: "1500 miles"
+        radius: "100 miles"
     },
 
     // Set useNearbyLocation to false if you don't want to get the user's location.
