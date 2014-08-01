@@ -116,7 +116,7 @@ $.extend(MapsLib, {
         columns: [
             { label: "Cuisine", type: "dropdown", template: "'Cuisine'",
                 entries: [
-                ["All Projects", "", true],
+                ["Any", "", true],
                 "African",
                 "American",
                 "Armenian",
