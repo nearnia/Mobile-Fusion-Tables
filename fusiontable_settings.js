@@ -276,7 +276,7 @@ $.extend(MapsLib, {
         center: "United States",
 
         // "X miles" or "X meters"
-        radius: "1500 miles"
+        radius: "15 miles"
     },
 
     // Set useNearbyLocation to false if you don't want to get the user's location.
