@@ -116,31 +116,23 @@ $.extend(MapsLib, {
     //  If "allColumns" is true, "text" and "slider" columns will simply override label/match settings for the specified columns
     //  Text fields for numerical columns use exact match only.  (If you want range categories, create a drop-down)
 
-    searchPage: { 
+    searchPage: {
         allColumns: false,
-        distanceFilter: { 
-            entries: [ 
-            ["Anywhere", "0", true], 
-            ["2 blocks", "400 meters"], 
-            ["1/2 mile", ".5 miles"], 
-            ["1 mile"], 
-            ["2 miles"] ]
-        },
-        columns: [ 
-            { label: "Rating Filter", type: "dropdown", entries: [
-                ["Any Rating", "'last_score' > 0", true],
-                ["Good", "'last_score' > 90"],
-                ["Adequate", "'last_score' > 85 AND 'last_score' <= 90"],
-                ["Needs Improvement", "'last_score' > 70 AND 'last_score' <= 85"],
-                ["Poor", "'last_score' <= 70 AND 'last_score' > 0"]
-            ] },
-            { label: "Name", type: "text", column: "name"},
-            { label: "Violations", type: "text", column: "violations"},
-            { label: "Score", type: "slider", column: "last_score", min: 0, max: 100},
-            { label: "Last Inspected", type: "datepicker", column: "last_inspection_date"},
-        ],
-    },
-*/
+        distanceFilter: {
+        entries: [ ["Anywhere", "0", true], ["2 miles"], ["8 miles"], ["100 miles"], ["500 miles"] ]
+                        },
+        columns: [
+            { label: "Business Name", type: "text", column: "Business Name"
+             },
+            { label: "Deal", type: "text", column: "Deal"
+             },
+                 ],
+        columns: [
+            { label: "Cuisine", type: "dropdown", foreach: "Cuisine",
+                entries: [ ["I'm not picky", "", true], }
+                 ],
+                },
+
 
 
     ///////////////////////
