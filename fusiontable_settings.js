@@ -162,7 +162,7 @@ $.extend(MapsLib, {
             { label: "Cost Range", type: "dropdown", template: "Cost", 
                 entries: [
                 ["Choose your price range", "", true],
-                "$"
+                "$",
                 "$$",
                 "$$$",
                 "$$$$",
