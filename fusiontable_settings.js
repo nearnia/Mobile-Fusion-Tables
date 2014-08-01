@@ -113,15 +113,31 @@ $.extend(MapsLib, {
 
     searchPage: { 
         allColumns: false,
-        distanceFilter: { 
-            entries: [ ["Anywhere", "0", true], ["2 miles"], ["8 miles"], ["100 miles"], ["500 miles"] ]
-        },
-            { label: "Cuisine", type: "dropdown", foreach: "Type of Cuisine",
+        columns: [
+            { label: "Project Type", type: "dropdown", template: "'Project Type' CONTAINS '{text}'",
                 entries: [
-                    ["Any", "", true], [“African”], [“American”], [“Armenian”], [“Barbecue”], [“Brazilian”], [“British”], [“Cafeteria”], [“Cajun”], [“Central American”], [“Chicken”], [“Chinese”], Cuban”], [“Ethiopian”], [“French”], [“German”], [“Hamburgers”], [“Homestyle Cooking”], [“Indian”], [“Irish”], [“Italian”], [“Jamaican”], [“Japanese”], [“Korean”], [“Mexican”], [“Middle Eastern”], [“Pancakes /Waffles”], [“Pizza”], [“Polynesian”], [“Russian”], [“Sandwiches”], [“Seafood”], [“Scandinavian”], [“Spanish”], [“Soul Food”], [“South American”], [“Steak”], [“Vegetarian”], [“Tex-Mex”], [“Thai”], [“Vietnamese”], [“Wild Game”] 
-                ],
-             },
-            { label: "Name", type: "text", column: "Name" }
+                ["All Projects", "", true],
+                "Bicycle",
+                "Major Capital Projects",
+                "Pedestrian Safety",
+                "Plans and Studies",
+                "Signs and Signals",
+                "Street Repair", 
+                "Transit Enhancements",
+                "Transit Rehab",
+                ["Transportation Demand Mgmt", "'Project Type' CONTAINS 'Transportation Demand Management'"]
+            ] },
+            { label: "Cost Range", type: "dropdown", 
+                entries: [
+                ["Any Cost", "", true],
+                ["At least $1M", "'Total Project Cost Estimate' LIKE '$%_,___,___'"],
+                ["At least $10M", "'Total Project Cost Estimate' LIKE '$%__,___,___'"],
+                ["At least $100M", "'Total Project Cost Estimate' LIKE '$%___,___,___'"]
+            ] },
+            { label: "Show Current Projects Only", type: "checkbox", 
+                is_checked: true,
+                checked_query: "'Percent Complete' NOT EQUAL TO '0%' AND 'Percent Complete' NOT EQUAL TO '100%'" },
+        ]
     },
 
 
