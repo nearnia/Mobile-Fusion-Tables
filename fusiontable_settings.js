@@ -159,14 +159,17 @@ $.extend(MapsLib, {
                 "Vietnamese",
                 "Wild Game",
                 ] },
-            { label: "Cost Range", type: "dropdown", template: "Cost" 
+            { label: "Cost Range", type: "dropdown", 
                 entries: [
-                ["$", "", true],
-                "$$",
-                "$$$",
-                "$$$$",
+                ["Any Cost", "", true],
+                ["At least $1M", "'Total Project Cost Estimate' LIKE '$%_,___,___'"],
+                ["At least $10M", "'Total Project Cost Estimate' LIKE '$%__,___,___'"],
+                ["At least $100M", "'Total Project Cost Estimate' LIKE '$%___,___,___'"]
             ] },
-                ]
+            { label: "Show Current Projects Only", type: "checkbox", 
+                is_checked: true,
+                checked_query: "'Percent Complete' NOT EQUAL TO '0%' AND 'Percent Complete' NOT EQUAL TO '100%'" },
+        ]
     },
 
 
@@ -175,12 +178,13 @@ $.extend(MapsLib, {
     ///////////////////////
 
     // Title bar (including title of website)
-    title: "Nearnia",
+    title: "U.S. Health Centers",
 
     // Contents of the About Page.  You can use "{title}" to insert your title.
     aboutPage: " \
         <h3>About {title}</h3> \
-        <p>Nearnia is an app to help you find the perfect deal in real-time. Enjoy.</p> \
+        <p>This is a demonstration of a Mobile Template using Fusion Tables.    Developed by SF Brigade for Code For America, it's an adaptation of Derek Eder's searchable Fusion Table template, licensed under the <a href='https://github.com/derekeder/FusionTable-Map-Template/wiki/License' target='_blank'>MIT License</a>.    This particular application uses data from the <a href='http://datawarehouse.hrsa.gov/Download_HCC_LookALikes.aspx' target='_blank'>HRSA</a>.</p> \
+        <p>To use this template for your own Fusion Table data, <a href='https://github.com/sfbrigade/Mobile-Fusion-Tables' target='_blank'>clone this repository</a> and replace the fields inside fusiontable_settings.js to match your content.</p> \
         ",
 
     // If you already customized your marker styles and infoboxes within the Fusion Table,
