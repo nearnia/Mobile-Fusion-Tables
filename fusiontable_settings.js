@@ -116,14 +116,12 @@ $.extend(MapsLib, {
         distanceFilter: { 
             entries: [ ["Anywhere", "0", true], ["2 miles"], ["8 miles"], ["100 miles"], ["500 miles"] ]
         },
-        columns: [
             { label: "Cuisine", type: "dropdown", foreach: "Type of Cuisine",
                 entries: [
-                    ["Any", "", true],
+                    ["Any", "", true], [“African”], [“American”], [“Armenian”], [“Barbecue”], [“Brazilian”], [“British”], [“Cafeteria”], [“Cajun”], [“Central American”], [“Chicken”], [“Chinese”], Cuban”], [“Ethiopian”], [“French”], [“German”], [“Hamburgers”], [“Homestyle Cooking”], [“Indian”], [“Irish”], [“Italian”], [“Jamaican”], [“Japanese”], [“Korean”], [“Mexican”], [“Middle Eastern”], [“Pancakes /Waffles”], [“Pizza”], [“Polynesian”], [“Russian”], [“Sandwiches”], [“Seafood”], [“Scandinavian”], [“Spanish”], [“Soul Food”], [“South American”], [“Steak”], [“Vegetarian”], [“Tex-Mex”], [“Thai”], [“Vietnamese”], [“Wild Game”] 
                 ],
              },
             { label: "Name", type: "text", column: "Name" }
-        ]
     },
 
 
