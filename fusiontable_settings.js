@@ -159,7 +159,7 @@ $.extend(MapsLib, {
                 "Vietnamese",
                 "Wild Game",
                 ] },
-            { label: "Cost Range", type: "dropdown", 
+            { label: "Cost Range", type: "dropdown", template: "Cost" 
                 entries: [
                 ["$", "", true],
                 "$$",
@@ -181,7 +181,6 @@ $.extend(MapsLib, {
     aboutPage: " \
         <h3>About {title}</h3> \
         <p>Nearnia is an app to help you find the perfect deal in real-time. Enjoy.</p> \
-        <p>To use this template for your own Fusion Table data, <a href='https://github.com/sfbrigade/Mobile-Fusion-Tables' target='_blank'>clone this repository</a> and replace the fields inside fusiontable_settings.js to match your content.</p> \
         ",
 
     // If you already customized your marker styles and infoboxes within the Fusion Table,
