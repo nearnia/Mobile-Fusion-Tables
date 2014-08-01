@@ -116,22 +116,20 @@ $.extend(MapsLib, {
     //  If "allColumns" is true, "text" and "slider" columns will simply override label/match settings for the specified columns
     //  Text fields for numerical columns use exact match only.  (If you want range categories, create a drop-down)
 
-    searchPage: {
+    searchPage: { 
         allColumns: false,
-        distanceFilter: {
-        entries: [ ["Anywhere", "0", true], ["2 miles"], ["8 miles"], ["100 miles"], ["500 miles"] ]
-                        },
-        columns: [
-            { label: "Business Name", type: "text", column: "Business Name"
-             },
-            { label: "Deal", type: "text", column: "Deal"
-             },
-                 ],
+        distanceFilter: { 
+            entries: [ ["Anywhere", "0", true], ["2 miles"], ["8 miles"], ["100 miles"], ["500 miles"] ]
+        },
         columns: [
             { label: "Cuisine", type: "dropdown", foreach: "Cuisine",
-                entries: [ ["I'm not picky", "", true], }
-                 ],
-                },
+                entries: [
+                    ["Any", "", true],
+                ],
+             },
+            { label: "Business Name", type: "text", column: "Business_Name" }
+        ]
+    },
 
 
 
