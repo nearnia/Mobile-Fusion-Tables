@@ -182,8 +182,7 @@ $.extend(MapsLib, {
     aboutPage: " \
         <h3>About {title}</h3> \
         <p>Nearnia is an app to help you find the perfect deal in real-time. Enjoy.</p> \
-        <p>To use this template for your own Fusion Table data, <a href='https://github.com/sfbrigade/Mobile-Fusion-Tables' target='_blank'>clone this repository</a> and replace the fields inside fusiontable_settings.js to match your content.</p> \
-        ",
+              ",
 
     // If you already customized your marker styles and infoboxes within the Fusion Table,
     // you can use them by setting the style and template IDs here.
@@ -194,20 +193,10 @@ $.extend(MapsLib, {
     
     // This will go in your style block.  Useful if customizing your infoboxes.
     customCSS: " \
-        .infobox-header, .ui-li-desc, #entity-text { font-family: Arial, Helvetica, Geneva, sans-serif; white-space:normal;} \
+        .infobox-header, .ui-li-desc, #entity-text { font-family: Arial, Helvetica, Geneva, sans-serif; white-space:normal; } \
         .infobox-subheader { padding-top: 5px; } \
         .infobox-map { width:220px; } \
-        .infobox-header { display:inline; padding-right: 10px; } \
-        .moreinfo { margin-left:7px; min-width:18px; position:absolute; \
-                top:45%; bottom:45%; min-height:18px; } \
-        .entity { float:left; font-size:medium; padding:5px; border:1px solid black; margin:2px 7px 5px 0px; } \
-        .entity.blue_box { display: none; background-color: #0060ed; color: white; } \
-        .entity.red_box { display: none; background-color: #fb6155; color: white; } \
-        .entity.orange_box { background-color: #ff9c00; color: white; } \
-        .entity.blue_box.Government { display: inherit; } \
-        .entity.red_box.Corporate { display: inherit; } \
-        .entity.orange_box.Government { display: none; } \
-        .entity.orange_box.Corporate { display: none; } \
+        .infobox-header { display:inline; text-transform:uppercase; padding-right: 10px; } \
     ",
 
     // customInfoboxHtml can be defined as a string or a function:
