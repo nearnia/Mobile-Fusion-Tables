@@ -30,7 +30,7 @@ var MapsLib = MapsLib || {}; MapsLib.schemaVersion = 2;
     // See https://developers.google.com/fusiontables/docs/v1/migration_guide for more info
 
     // The encrypted Table ID of your Fusion Table (found under File => About)
-    MapsLib.fusionTableId = "13xmU6wANRJb0Niqcdz5Tr0xWh4AyV0yN10xMxPc";
+    MapsLib.fusionTableId = "12hrm7BL2EGB9t33imhjut6fGlE1GppcOgbg0rrGX";
 
     // *New Fusion Tables Requirement* API key. found at https://code.google.com/apis/console/
     // *Important* this key is for demonstration purposes. please register your own.
@@ -232,7 +232,20 @@ $.extend(MapsLib, {
     nearbyPinInfobox: "You are here.",
     addressPinInfobox: "{address}",
 */
-
+  customInfoboxHtml: function(row, isListView) {
+        var html = isListView ? '<div>' : '<div class="infobox-map">';
+        html += '<h4 class="infobox-header">' + row.Business_Name + '</h4>';
+        html += '<p class="ui-li-desc infobox-subheader">';
+        html += '<strong>' + row.Cuisine + '</strong>
+        html += '<strong>' + row.Deal + '</strong></p>';
+        html += '<p class="ui-li-desc">' + row.Address;
+        if (!isListView) 
+        {
+            html += '<br><a href="Cost' + row.Cost + '</a>'; 
+        }
+        html += '</p></div>';
+        return html;
+    },
 
     ////////////////////////
     // 4. MAP PREFERENCES //
