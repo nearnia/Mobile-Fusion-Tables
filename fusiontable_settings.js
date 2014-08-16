@@ -192,12 +192,7 @@ $.extend(MapsLib, {
     //templateId: 3,
     
     // This will go in your style block.  Useful if customizing your infoboxes.
-    customCSS: " \
-        .infobox-header, .ui-li-desc, #entity-text { font-family: Arial, Helvetica, Geneva, sans-serif; white-space:normal; } \
-        .infobox-subheader { padding-top: 5px; } \
-        .infobox-map { width:220px; } \
-        .infobox-header { display:inline; text-transform:uppercase; padding-right: 10px; } \
-    ",
+    
 
     // customInfoboxHtml can be defined as a string or a function:
     //    STRING:    You can embed Handlebars expressions and variables.
